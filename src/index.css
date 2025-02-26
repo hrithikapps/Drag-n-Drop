@@ -1,0 +1,73 @@
+.landing-page {
+  text-align: center;
+}
+
+input {
+  width: 250px;
+  height: 35px;
+  font-size: 20px;
+  padding: 5px;
+}
+.board {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo-col {
+  background-color: beige;
+  padding: 10px 0px;
+  text-align: center;
+}
+.doing-col {
+  background-color: lightblue;
+  padding: 10px 0px;
+}
+.done-col {
+  background-color: lightgreen;
+  padding: 10px 0px;
+}
+.todo {
+  width: 33%;
+  height: 400px;
+}
+.doing {
+  width: 33%;
+  height: 400px;
+  margin: 0px 10px;
+}
+.done {
+  width: 33%;
+  height: 400px;
+}
+.todo,
+.doing,
+.done {
+  text-align: center;
+}
+.task-items {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: grab;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+}
+
+.btn:hover {
+  background-color: darkgray;
+  cursor: pointer;
+  border-radius: 50%;
+}
