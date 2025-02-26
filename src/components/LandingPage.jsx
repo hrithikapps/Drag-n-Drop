@@ -17,13 +17,24 @@ const LandingPage = () => {
 
   const handleInputKeyDown = (e) => {
     if (e.keyCode == 13) {
-      const newTask = {
-        title: inputValue,
-        status: STATUS.TODO,
-        id: Date.now(),
-      };
-      setTasks((prevTask) => [...prevTask, newTask]);
-      setInputValue("");
+      if (updating) {
+        const newTask = tasks.map((item) => {
+          if (item.id === updating.id) {
+            item.title = inputValue;
+          }
+          return item;
+        });
+        setTasks((prevTask) => [...prevTask, newTask]);
+        setInputValue("");
+      } else {
+        const newTask = {
+          title: inputValue,
+          status: STATUS.TODO,
+          id: Date.now(),
+        };
+        setTasks((prevTask) => [...prevTask, newTask]);
+        setInputValue("");
+      }
     }
   };
 
@@ -65,6 +76,7 @@ const LandingPage = () => {
   };
 
   const handleUpdateTask = (task) => {
+    setInputValue(task.title);
     setUpdating(task);
   };
 
